@@ -31,7 +31,7 @@ For example, property storage.location.base has value s3://mardiyan-aws-2201-buc
 
 # Provision Data Hub Clusters
  
-This tutorial requires that we provision 2 data hub clusters named:
+This workshop requires that we provision 2 data hub clusters named:
 
 flow-management, using cluster definition 7.x - Flow Management Light Duty for AWS
 
@@ -44,3 +44,100 @@ streams-messaging, using cluster definition 7.x - Streams Messaging Light Duty f
 provision-streams-messaging
 
 ![alt text](https://github.com/arzamuhammad/cdp-public-cloud-odb-nifi/blob/main/images/datahub_sm.png)
+
+# Create Operational Database
+
+This workshop requires that we provision operational database cluster
+
+Operational Database --> Create Database
+
+![alt text](https://github.com/arzamuhammad/cdp-public-cloud-odb-nifi/blob/main/images/create_odb.png)
+
+# Operational Database
+ 
+We need to create an HBase table using phoenix
+
+Open Hue
+
+operational-database > choose your database name > hue
+
+![alt text](https://github.com/arzamuhammad/cdp-public-cloud-odb-nifi/blob/main/images/hue_operational_database.png)
+
+#### run this below query
+
+CREATE TABLE IF NOT EXISTS TRANSACTION
+(
+transaction_id integer PRIMARY key,
+customer_id integer,
+store_id integer,
+product_id integer,
+price integer,
+total_trx integer,
+total_amount bigint,
+transaction_date date,
+process_date timestamp
+);
+
+CREATE TABLE IF NOT EXISTS STORE
+(
+store_id integer PRIMARY key,
+store_name varchar,
+city varchar,
+status varchar,
+created_date date
+);
+
+CREATE TABLE IF NOT EXISTS CUSTOMER
+(
+customer_id integer primary key,
+customer_firstname varchar,
+customer_lastname varchar,
+email varchar,
+phonenumber bigint,
+status varchar,
+created_date date
+);
+
+CREATE TABLE IF NOT EXISTS PRODUCT_REF
+(
+product_id integer PRIMARY key,
+product_name varchar,
+product_category varchar,
+normal_price integer,
+create_date date
+);
+
+
+# Streams Messaging
+ 
+Let's create five (5) new Topics:
+
+Begin from Streams Messaging Data Hub:
+
+streams-messaging > Streams Messaging Manager
+
+![alt text](https://github.com/arzamuhammad/cdp-public-cloud-odb-nifi/blob/main/images/stream_messaging.png)
+
+Select Topics
+Select Add New
+TOPIC NAME: Transaction-1
+PARTITIONS: 5
+Availability: Maximum
+Cleanup Policy: delete
+Save
+Repeat the same steps to create the following named topics:
+
+Transaction-2
+
+Transaction-3
+
+Transaction-4
+
+Transaction-5
+
+![alt text](https://github.com/arzamuhammad/cdp-public-cloud-odb-nifi/blob/main/images/create_topic.png)
+
+
+# Build and Configure NiFi Data Flow
+ 
+Instead of building the data flow from scratch, we will use the template provided in download assets
