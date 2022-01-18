@@ -294,6 +294,10 @@ Or we can just
 Right-click  on the Reference Group, choose Variable
 
 Click on value column to modify the variable:
+ 
+
+  ![alt text](https://github.com/arzamuhammad/cdp-public-cloud-odb-nifi/blob/main/images/Reference_variable.png)
+ 
 
 Name: username, Value: <use your CDP workload username>
 Name: file_location, Value: <environment’s storage.location.base attribute>
@@ -307,11 +311,20 @@ We will run one processor group at a time.
 
 ### Expand processor group Customer  and run all processors at once by clicking play in the Operate menu.
  
+ 
+ ![alt text](https://github.com/arzamuhammad/cdp-public-cloud-odb-nifi/blob/main/images/reference_customer.png)
+ 
+ 
 ### Expand processor group Product_Ref  and run all processors at once by clicking play in the Operate menu.'
+ 
+ 
+  ![alt text](https://github.com/arzamuhammad/cdp-public-cloud-odb-nifi/blob/main/images/reference_product_ref.png)
+ 
  
 ### Expand processor group Store  and run all processors at once by clicking play in the Operate menu.
  
  
- # Create Index on Phoenix Hbase
+ 
+# Create Index on Phoenix Hbase
  
  
