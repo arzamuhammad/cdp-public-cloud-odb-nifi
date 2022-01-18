@@ -252,7 +252,7 @@ We will run one processor group at a time.
 After a few seconds, you will see the data flow through all the processors. Click on  from the Operate menu to stop all processors at once.
 
  
-### Expand processor group Kafka Ingest and  run all processors at once by clicking  in the Operate menu.
+### Expand processor group Kafka Ingest and  run all processors at once by clicking play in the Operate menu.
 
 After a few seconds, you will see the data flow through all the processors. Click on  from the Operate menu to stop all processors at once.
  
@@ -266,5 +266,42 @@ After a few seconds, you will see the data flow through all the processors. Clic
  ### Select * from Transaction
  ### Select count(*) from Transaction
  
+
+ #  Upload NiFi Template - Part 2
+ 
+NiFi data flow template, l, was provided in xml-and-json directory ( Reference_CDPODB.xml ). Follow these easy  steps to upload.
+
+1. Click on ![alt text](https://github.com/arzamuhammad/cdp-public-cloud-odb-nifi/blob/main/images/icon-nifi-template-upload.webp)  to upload collect-dataflow-template.xml template
+2. Click and drag ![alt text](https://github.com/arzamuhammad/cdp-public-cloud-odb-nifi/blob/main/images/icon-nifi-template.webp)  into the canvas and select collect-dataflow-template
+
+Or we can just 
+
+1. click and drag process group
+2. upload the json file into process group ( Reference.json )
+ 
+# Modify Variables used in Data Flow - Part 2
+ 
+Right-click  on the Reference Group, choose Variable
+
+Click on value column to modify the variable:
+
+Name: username, Value: <use your CDP workload username>
+Name: file_location, Value: <environment’s storage.location.base attribute>
+ 
+ 
+  # Run Data Flow
+ 
+Let's run the data flow you have just created. You have the option to run all processor groups, a processor group at a time or single processor at a time. For general debugging and diagnostics, it is recommended to run one processor at a time. This will allow you to validate data in the list queues.
+
+We will run one processor group at a time.
+
+### Expand processor group Customer  and run all processors at once by clicking play in the Operate menu.
+ 
+### Expand processor group Product_Ref  and run all processors at once by clicking play in the Operate menu.'
+ 
+### Expand processor group Store  and run all processors at once by clicking play in the Operate menu.
+ 
+ 
+ # Create Index on Phoenix Hbase
  
  
