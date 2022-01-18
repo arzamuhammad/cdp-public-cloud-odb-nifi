@@ -23,10 +23,10 @@ Note: You may need to ask your environment's administrator to get property value
  
 For example, property storage.location.base has value s3://mardiyan-aws-2201-bucket/data/; therefore copy the files using the command:
 
-# aws s3 cp transaction.txt s3://mardiyan-aws-2201-bucket/data/tmp/
-# aws s3 cp customer.txt s3://mardiyan-aws-2201-bucket/data/tmp/
-# aws s3 cp product_ref.txt s3://mardiyan-aws-2201-bucket/data/tmp/
-# aws s3 cp store.txt s3://mardiyan-aws-2201-bucket/data/tmp/
+#### aws s3 cp transaction.txt s3://mardiyan-aws-2201-bucket/data/tmp/
+#### aws s3 cp customer.txt s3://mardiyan-aws-2201-bucket/data/tmp/
+#### aws s3 cp product_ref.txt s3://mardiyan-aws-2201-bucket/data/tmp/
+#### aws s3 cp store.txt s3://mardiyan-aws-2201-bucket/data/tmp/
 
 ## Provision Data Hub Clusters
  
