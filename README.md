@@ -147,7 +147,7 @@ You can see the templates on the xml-and-json directory
 
 # Upload NiFi Template
  
-NiFi data flow template, l, was provided in xml-and-json directory. Follow these easy  steps to upload.
+NiFi data flow template, l, was provided in xml-and-json directory ( Transaction_to_Hbase.xml ). Follow these easy  steps to upload.
 
 1. Click on ![alt text](https://github.com/arzamuhammad/cdp-public-cloud-odb-nifi/blob/main/images/icon-nifi-template-upload.webp)  to upload collect-dataflow-template.xml template
 2. Click and drag ![alt text](https://github.com/arzamuhammad/cdp-public-cloud-odb-nifi/blob/main/images/icon-nifi-template.webp)  into the canvas and select collect-dataflow-template
@@ -155,7 +155,8 @@ NiFi data flow template, l, was provided in xml-and-json directory. Follow these
 Or we can just 
 
 1. click and drag process group
-2. upload the json file into process group 
+   ![alt text](https://github.com/arzamuhammad/cdp-public-cloud-odb-nifi/blob/main/images/process_group.png)
+3. upload the json file ( Transaction_to_Hbase.json ) into process group 
    ![alt text](https://github.com/arzamuhammad/cdp-public-cloud-odb-nifi/blob/main/images/add_process_group.png)
    
 # Modify Variables used in Data Flow
