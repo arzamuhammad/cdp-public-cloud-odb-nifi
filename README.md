@@ -1,16 +1,16 @@
 # cdp-public-cloud-odb-nifi
 
-## Introduction
+# Introduction
  
 Data Lifecycle - collecting data. This workshop will show you how to use Apache NiFi to pull data from a cloud storage solution, format it to send it into a messaging queue (Kafka), and finally consume from that queue to ingest it into an operational database (HBase).
 
-## Prerequisites
+# Prerequisites
  
 Have access to Cloudera Data Platform (CDP) Public Cloud
 Have created a CDP workload User
 Basic AWS CLI skills
  
-## Assets
+# Assets
 
 Clone our GitHub repository --> https://github.com/arzamuhammad/cdp-public-cloud-odb-nifi.git or git@github.com:arzamuhammad/cdp-public-cloud-odb-nifi.git
 It provides assets used in this and other tutorials
@@ -28,17 +28,19 @@ For example, property storage.location.base has value s3://mardiyan-aws-2201-buc
 #### aws s3 cp product_ref.txt s3://mardiyan-aws-2201-bucket/data/tmp/
 #### aws s3 cp store.txt s3://mardiyan-aws-2201-bucket/data/tmp/
 
-## Provision Data Hub Clusters
+
+# Provision Data Hub Clusters
  
 This tutorial requires that we provision 2 data hub clusters named:
 
 flow-management, using cluster definition 7.x - Flow Management Light Duty for AWS
- 
 
 provision-flow-management
  
+ ![alt text](https://github.com/arzamuhammad/cdp-public-cloud-odb-nifi/blob/main/images/datahub_cfm.png)
 
 streams-messaging, using cluster definition 7.x - Streams Messaging Light Duty for AWS
- 
 
 provision-streams-messaging
+
+![alt text](https://github.com/arzamuhammad/cdp-public-cloud-odb-nifi/blob/main/images/datahub_sm.png)
