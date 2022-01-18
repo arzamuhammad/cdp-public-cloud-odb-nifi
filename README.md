@@ -281,7 +281,13 @@ NiFi data flow template, l, was provided in xml-and-json directory ( Reference_C
 Or we can just 
 
 1. click and drag process group
+ 
+    ![alt text](https://github.com/arzamuhammad/cdp-public-cloud-odb-nifi/blob/main/images/process_group.png)
+ 
+ 
 2. upload the json file into process group ( Reference.json )
+ 
+    ![alt text](https://github.com/arzamuhammad/cdp-public-cloud-odb-nifi/blob/main/images/add_process_group.png)
  
 # Modify Variables used in Data Flow - Part 2
  
