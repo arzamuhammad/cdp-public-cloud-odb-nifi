@@ -152,3 +152,119 @@ NiFi data flow template, l, was provided in xml-and-json directory. Follow these
 1. Click on ![alt text](https://github.com/arzamuhammad/cdp-public-cloud-odb-nifi/blob/main/images/icon-nifi-template-upload.webp)  to upload collect-dataflow-template.xml template
 2. Click and drag ![alt text](https://github.com/arzamuhammad/cdp-public-cloud-odb-nifi/blob/main/images/icon-nifi-template.webp)  into the canvas and select collect-dataflow-template
 
+Or we can just 
+
+1. click and drag process group
+2. upload the json file into process group 
+   ![alt text](https://github.com/arzamuhammad/cdp-public-cloud-odb-nifi/blob/main/images/add_process_group.png)
+   
+# Modify Variables used in Data Flow
+ 
+Right-click  on the Transaction to Hbase Group, choose Variable
+
+Click on value column to modify the variable:
+
+Name: username, Value: <use your CDP workload username>
+Name: file_location, Value: <environment’s storage.location.base attribute>
+Name: kafkabrokers, Value: <list of all Kafka broker addresses, separated by commas>
+Kafka broker addresses are found in Streams Messaging Data Hub.
+
+streams-messaging > Streams Messaging Manager
+ 
+![alt text](https://github.com/arzamuhammad/cdp-public-cloud-odb-nifi/blob/main/images/stream_messaging.png)
+ 
+Select Brokers
+
+The broker address is located underneath its name. 
+ 
+![alt text](https://github.com/arzamuhammad/cdp-public-cloud-odb-nifi/blob/main/images/kafka_broker.png)
+ 
+The variables defined should look something like:
+ 
+![alt text](https://github.com/arzamuhammad/cdp-public-cloud-odb-nifi/blob/main/images/nifi_variables.png)
+ 
+# Configure Controller Services
+ 
+Right-click on processor group Push to Kafka
+Select Configure
+Enable CSVReader, CSVRecordSetWriter, JsonRecordSetWriter, JsonTreeReader by clicking on enable icon 
+Note1: You should see two (2) services named Default NiFi SSL Context Service. Delete the one marked with .
+
+Right-click on processor group Kafka Ingest
+Select Configure
+Enable CSVReader, CSVRecordSetWriter, JsonRecordSetWriter, JsonTreeReader by clicking on enable icon 
+
+![alt text](https://github.com/arzamuhammad/cdp-public-cloud-odb-nifi/blob/main/images/controller_services.png)
+ 
+ There are three steps in enabling Phoenix Client controller:
+ 
+ 1. fill the Database Connection Url by the information that you get from operational database 
+  
+ ![alt text](https://github.com/arzamuhammad/cdp-public-cloud-odb-nifi/blob/main/images/phoenix_thin.png)
+ ![alt text](https://github.com/arzamuhammad/cdp-public-cloud-odb-nifi/blob/main/images/phoenix_client_controller.png)
+ 
+ dont forget to change the password value by your workload user password\
+ 
+ 2. set Database Driver Class name value : org.apache.phoenix.queryserver.client.Driver
+ 3. set Database Driver Location(s) : /opt/cloudera/parcels/CDH/lib/phoenix_queryserver/phoenix-queryserver-client-6.0.0.7.2.12.2-5.jar
+ 
+
+# Configure Processors
+ 
+Several processors, in each group, require passwords. We will update them using your CDP workload password.
+
+ 
+
+ 
+Push to Kafka processor group
+ 
+Expand processor group and update properties for the following processors:
+
+Pull-From-S3: update Kerberos Password
+Transaction 1 Kafka Stream: update Password and SSL Context Service with Default NiFi SSL Context Service
+Transaction 2 Kafka Stream: update Password and SSL Context Service with Default NiFi SSL Context Service
+Transaction 3 Kafka Stream: update Password and SSL Context Service with Default NiFi SSL Context Service
+Transaction 4 Kafka Stream: update Password and SSL Context Service with Default NiFi SSL Context Service
+Transaction 5 Kafka Stream: update Password and SSL Context Service with Default NiFi SSL Context Service
+ 
+
+Kafka Ingest processor group
+ 
+Expand processor group and update properties for the following processors:
+
+Transaction 1 Kafka Stream: update Password and SSL Context Service with Default NiFi SSL Context Service
+Transaction 2 Kafka Stream: update Password and SSL Context Service with Default NiFi SSL Context Service
+Transaction 3 Kafka Stream: update Password and SSL Context Service with Default NiFi SSL Context Service
+Transaction 4 Kafka Stream: update Password and SSL Context Service with Default NiFi SSL Context Service
+Transaction 5 Kafka Stream: update Password and SSL Context Service with Default NiFi SSL Context Service
+ 
+![alt text](https://github.com/arzamuhammad/cdp-public-cloud-odb-nifi/blob/main/images/kafka_stream_processor.png) 
+ 
+ 
+ # Run Data Flow
+ 
+Let's run the data flow you have just created. You have the option to run all processor groups, a processor group at a time or single processor at a time. For general debugging and diagnostics, it is recommended to run one processor at a time. This will allow you to validate data in the list queues.
+
+We will run one processor group at a time.
+
+### Expand processor group Push to Kafka and run all processors at once by clicking play in the Operate menu.
+
+After a few seconds, you will see the data flow through all the processors. Click on  from the Operate menu to stop all processors at once.
+
+ 
+### Expand processor group Kafka Ingest and  run all processors at once by clicking  in the Operate menu.
+
+After a few seconds, you will see the data flow through all the processors. Click on  from the Operate menu to stop all processors at once.
+ 
+ 
+# View HBase Data
+ 
+ Open hue
+ 
+ Run this below Query
+ 
+ ### Select * from Transaction
+ ### Select count(*) from Transaction
+ 
+ 
+ 
