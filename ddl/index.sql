@@ -1,0 +1,1 @@
+CREATE INDEX trx_index ON TRANSACTION (customer_id) include (store_id, product_id);
