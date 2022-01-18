@@ -28,6 +28,7 @@ For example, property storage.location.base has value s3://mardiyan-aws-2201-buc
 #### aws s3 cp product_ref.txt s3://mardiyan-aws-2201-bucket/data/tmp/
 #### aws s3 cp store.txt s3://mardiyan-aws-2201-bucket/data/tmp/
 
+
 # Provision Data Hub Clusters
  
 This tutorial requires that we provision 2 data hub clusters named:
