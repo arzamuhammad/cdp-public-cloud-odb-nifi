@@ -33,6 +33,8 @@ For example, property storage.location.base has value s3://mardiyan-aws-2201-buc
 This tutorial requires that we provision 2 data hub clusters named:
 
 flow-management, using cluster definition 7.x - Flow Management Light Duty for AWS
+
+![alt text](https://github.com/arzamuhammad/cdp-public-cloud-odb-nifi/blob/main/images/datahub_cfm.png)
  
 
 provision-flow-management
