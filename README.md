@@ -35,13 +35,12 @@ This tutorial requires that we provision 2 data hub clusters named:
 
 flow-management, using cluster definition 7.x - Flow Management Light Duty for AWS
 
-![alt text](https://github.com/arzamuhammad/cdp-public-cloud-odb-nifi/blob/main/images/datahub_cfm.png)
- 
-
 provision-flow-management
  
+ ![alt text](https://github.com/arzamuhammad/cdp-public-cloud-odb-nifi/blob/main/images/datahub_cfm.png)
 
 streams-messaging, using cluster definition 7.x - Streams Messaging Light Duty for AWS
- 
 
 provision-streams-messaging
+
+![alt text](https://github.com/arzamuhammad/cdp-public-cloud-odb-nifi/blob/main/images/datahub_sm.png)
