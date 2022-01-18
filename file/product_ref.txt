@@ -1,0 +1,51 @@
+product_id,product_name,product_category,normal_price,create_date
+1,White Rice,Basic Commodities,60000,2022-01-11
+2,Red Rice,Basic Commodities,80000,2022-01-11
+3,Sugar,Basic Commodities,10000,2022-01-11
+4,Tepung Beras Rosebrand,Basic Commodities,25000,2022-01-11
+5,Tepung Segitiga Biru,Basic Commodities,35000,2022-01-11
+6,Tropicana Slim,Basic Commodities,50000,2022-01-11
+7,Minyak Goreng Tropical,Basic Commodities,35000,2022-01-11
+8,Minyak Goreng Bimoli,Basic Commodities,40000,2022-01-11
+9,Sari Roti,Basic Commodities,15000,2022-01-11
+10,Breadlife,Basic Commodities,20000,2022-01-11
+11,Indomie Goreng,Grocery,5000,2022-01-11
+12,Indomie Rebus,Grocery,5000,2022-01-11
+13,Mie Sedaap Goreng,Grocery,5000,2022-01-11
+14,Sirup ABC,Grocery,20000,2022-01-11
+15,Sirup Marjan,Grocery,30000,2022-01-11
+16,Kopi ABC,Grocery,10000,2022-01-11
+17,Kopi Torabika,Grocery,20000,2022-01-11
+18,Kopi Exelso,Grocery,40000,2022-01-11
+19,Teh Sariwangi,Grocery,15000,2022-01-11
+20,Saos Sambal ABC,Grocery,15000,2022-01-11
+21,Saos Tomat ABC,Grocery,15000,2022-01-11
+22,Sosis Kimbo,Grocery,50000,2022-01-11
+23,Silverqueen,Snacks,25000,2022-01-11
+24,Coca Cola,Snacks,15000,2022-01-11
+25,Fanta,Snacks,15000,2022-01-11
+26,Chitato,Snacks,20000,2022-01-11
+27,Cheetos,Snacks,15000,2022-01-11
+28,Magnum,Snacks,25000,2022-01-11
+29,Kitkat,Snacks,20000,2022-01-11
+30,MnM,Snacks,30000,2022-01-11
+31,Selamat,Snacks,20000,2022-01-11
+32,Toblerone,Snacks,25000,2022-01-11
+33,Nutrisari,Snacks,20000,2022-01-11
+34,Oreo,Snacks,15000,2022-01-11
+35,Vixal,House Hold,50000,2022-01-11
+36,Soklin,House Hold,65000,2022-01-11
+37,Wipot,House Hold,40000,2022-01-11
+38,Rinso ,House Hold,75000,2022-01-11
+39,Molto,House Hold,55000,2022-01-11
+40,Milo,Health And Beauty,80000,2022-01-11
+41,Rexona,Health And Beauty,20000,2022-01-11
+42,Ponds,Health And Beauty,35000,2022-01-11
+43,Nivea ,Health And Beauty,60000,2022-01-11
+44,Clear,Health And Beauty,55000,2022-01-11
+45,Pepsodent,Health And Beauty,25000,2022-01-11
+46,Pediasure,Health And Beauty,150000,2022-01-11
+47,Panadol,Health And Beauty,15000,2022-01-11
+48,Tolak Angin,Health And Beauty,20000,2022-01-11
+49,Loreal,Health And Beauty,60000,2022-01-11
+50,Sanitizer,Health And Beauty,100000,2022-01-11

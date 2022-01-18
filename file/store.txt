@@ -1,0 +1,6 @@
+store_id,store_name,city,status,created_date
+1,Betamart Senayan,Jakarta,Active,2021-01-11
+2,Betamart Gandaria,Jakarta,Active,2021-01-11
+3,Betamart Sudirman,Jakarta,Active,2021-01-11
+4,Betamart BSD,Jakarta,Active,2021-01-11
+5,Betamart Kemang,Jakarta,Active,2021-01-11
