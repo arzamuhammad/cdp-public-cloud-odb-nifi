@@ -155,8 +155,11 @@ NiFi data flow template, l, was provided in xml-and-json directory ( Transaction
 Or we can just 
 
 1. click and drag process group
+   
    ![alt text](https://github.com/arzamuhammad/cdp-public-cloud-odb-nifi/blob/main/images/process_group.png)
-3. upload the json file ( Transaction_to_Hbase.json ) into process group 
+
+2.  upload the json file ( Transaction_to_Hbase.json ) into process group 
+   
    ![alt text](https://github.com/arzamuhammad/cdp-public-cloud-odb-nifi/blob/main/images/add_process_group.png)
    
 # Modify Variables used in Data Flow
