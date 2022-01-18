@@ -22,9 +22,11 @@ created_date date
 
 CREATE TABLE IF NOT EXISTS CUSTOMER
 (
-store_id integer PRIMARY key,
-store_name varchar,
-city varchar,
+customer_id integer primary key,
+customer_firstname varchar,
+customer_lastname varchar,
+email varchar,
+phonenumber bigint,
 status varchar,
 created_date date
 );
