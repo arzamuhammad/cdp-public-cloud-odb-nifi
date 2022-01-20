@@ -110,7 +110,7 @@ create_date date
 
 # Streams Messaging
  
-Let's create five (5) new Topics:
+Let's create 1 new Topics:
 
 Begin from Streams Messaging Data Hub:
 
@@ -125,15 +125,6 @@ PARTITIONS: 5
 Availability: Maximum
 Cleanup Policy: delete
 Save
-Repeat the same steps to create the following named topics:
-
-Transaction-2
-
-Transaction-3
-
-Transaction-4
-
-Transaction-5
 
 ![alt text](https://github.com/arzamuhammad/cdp-public-cloud-odb-nifi/blob/main/images/create_topic.png)
 
